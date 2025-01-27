@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Start Logging Button -->
+    <Button
+        android:id="@+id/btnStartLogging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Logging"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Stop Logging Button -->
+    <Button
+        android:id="@+id/btnStopLogging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Logging" />
+
+</LinearLayout>

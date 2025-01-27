@@ -34,7 +34,10 @@ public class LocationService extends android.app.Service {
         super.onCreate();
 
         // Initialize Firebase
-        mDatabase = FirebaseDatabase.getInstance().getReference("locations");
+        //mDatabase = FirebaseDatabase.getInstance().getReference("locations");
+        mDatabase = FirebaseDatabase.getInstance("https://locator-2aa87-default-rtdb.asia-southeast1.firebasedatabase.app")
+                .getReference("locations");
+
 
         // Create the notification channel for Android 8.0 and above
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -113,8 +116,8 @@ public class LocationService extends android.app.Service {
         LocationData locationData = new LocationData(location.getLatitude(), location.getLongitude());
 
         // Log the data that will be sent to Firebase
-        Log.d("LocationService", "Location ID: " + locationId);
-        Log.d("LocationService", "Location data: " + locationData.getLatitude() + ", " + locationData.getLongitude());
+        //Log.d("LocationService", "Location ID: " + locationId);
+        //Log.d("LocationService", "Location data: " + locationData.getLatitude() + ", " + locationData.getLongitude());
 
         // Send the location data to Firebase
         if (locationId != null) {
